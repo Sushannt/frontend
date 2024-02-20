@@ -1,5 +1,6 @@
 import { sidebarData } from "../data.js";
 import ListComponent from "./ListComponent.jsx";
+import AuthModal from "./AuthModal.jsx";
 import {
   ShoppingCartIcon,
   BuildingStorefrontIcon,
@@ -91,7 +92,7 @@ const Header = () => {
                 <li className="min-w-full">
                   <div className="flex justify-between w-full">
                     <span className="text-nowrap">New Customer? </span>
-                    <button className="btn btn-sm btn-primary">Sign Up</button>
+                    <AuthModal />
                   </div>
                 </li>
                 <li className="py-2">My Profile</li>
@@ -120,10 +121,7 @@ const Header = () => {
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Item 2</a>
+                  <a href="/api/auth/logout">Logout</a>
                 </li>
               </ul>
             </div>
